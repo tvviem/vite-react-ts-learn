@@ -1,33 +1,18 @@
 import './App.css';
 import { Greet } from './components/Greet';
-import { Person } from './components/Person';
-import PersonList from './components/PersonList';
+import { Heading } from './components/Heading';
+import Oscar from './components/Oscar';
+import { Status } from './components/Status';
 
 function App() {
-  const personName = {
-    fName: 'Viêm',
-    lName: 'Triệu'
-  };
-
-  const nameList = [
-    {
-      fName: 'Viêm',
-      lName: 'Triệu'
-    },
-    {
-      fName: 'Loan',
-      lName: 'Phạm'
-    },
-    {
-      fName: 'Baby',
-      lName: 'Triệu'
-    }
-  ];
   return (
     <div className="App">
-      <Greet name={'Vinh Viem'} messageCount={15} isLoggedIn={false} />
-      <Person name={personName} />
-      <PersonList names={nameList} />
+      <Status status={'success'} />
+      <Heading>Children inside here</Heading>
+      <Oscar>
+        <Heading>Welcome react child node</Heading>
+      </Oscar>
+      <Greet name="Vĩnh Viêm" isLoggedIn={true} />
     </div>
   );
 }
