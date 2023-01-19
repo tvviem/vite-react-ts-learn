@@ -1,16 +1,11 @@
-import React from 'react';
-
-type PersonProps = {
-  name: {
-    fName: string;
-    lName: string;
-  };
-};
+import { PersonProps } from './Person.types';
 
 export const Person = ({ name }: PersonProps) => {
   return (
     <div>
-      {name.fName} {name.lName}
+      <h2>
+        {name.fName} {name.lName}
+      </h2>
     </div>
   );
 };

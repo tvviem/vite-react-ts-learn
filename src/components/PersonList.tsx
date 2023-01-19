@@ -1,7 +1,7 @@
-import React from 'react';
+import { Name } from './Person.types';
 
 type PersonListProps = {
-  names: { fName: string; lName: string }[];
+  names: Name[];
 };
 
 const PersonList = (props: PersonListProps) => {
@@ -9,7 +9,7 @@ const PersonList = (props: PersonListProps) => {
     <div>
       {props.names.map((name) => {
         return (
-          <h2 key={name.fName} style={{ color: 'blue', fontSize: '16px' }}>
+          <h2 key={name.fName} style={{ color: 'red', fontSize: '16px' }}>
             {name.fName} {name.lName}
           </h2>
         );
