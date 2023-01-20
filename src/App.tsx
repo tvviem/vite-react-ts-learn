@@ -1,10 +1,15 @@
+import { ThemeContextProvider } from './components/context/ThemeContext';
+import { Box } from './components/context/Box';
 import './App.css';
-import { Counter } from './components/state/Counter';
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      {/* Step 3: Wrap ThemeContextProvider around Box */}
+      <ThemeContextProvider>
+        {/* As the children props */}
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
