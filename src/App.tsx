@@ -1,34 +1,13 @@
 import './App.css';
-import { Person } from './components/Person';
-import PersonList from './components/PersonList';
+import { LoggedIn } from './components/state/LoggedIn';
+import { User } from './components/state/User';
 
 function App() {
-  const name = {
-    fName: 'Viêm',
-    lName: 'Triệu'
-  };
-  const listOfName = [
-    {
-      fName: 'Viêm',
-      lName: 'Triệu'
-    },
-    {
-      fName: 'Loan',
-      lName: 'Phạm'
-    },
-    {
-      fName: 'Baby',
-      lName: 'Triệu'
-    }
-  ];
   return (
-    <>
-      <div className="App">
-        <Person name={name} />
-      </div>
-      <h1>List of people</h1>
-      <PersonList names={listOfName} />
-    </>
+    <div className="App">
+      <LoggedIn />
+      <User />
+    </div>
   );
 }
 
