@@ -6,20 +6,17 @@ type AuthUser = {
 };
 
 export const User = () => {
-  const [user, setUser] = useState<AuthUser | null>(null);
+  // using type assertion for USER Would NEVER NULL after this component mounted
+  const [user, setUser] = useState({} as AuthUser); // type assertion
   const handleLogin = () => {
     setUser({ name: 'Viem', email: 'tve@acm.com' });
-  };
-  const handleLogout = () => {
-    setUser(null);
   };
 
   return (
     <div>
       <button onClick={handleLogin}>Login</button>
-      <button onClick={handleLogout}>Logout</button>
-      <div>User name is {user?.name}</div>
-      <div>User email is {user?.email}</div>
+      <div>User name is {user.name}</div>
+      <div>User email is {user.email}</div>
     </div>
   );
 };
