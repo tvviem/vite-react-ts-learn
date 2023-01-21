@@ -5,10 +5,7 @@ import { User } from './components/context/User';
 function App() {
   return (
     <div className="App">
-      {/* Step 4: wrap User component inside context provider */}
-      <UserContextProvider>
-        <User />
-      </UserContextProvider>
+      <User />
     </div>
   );
 }
